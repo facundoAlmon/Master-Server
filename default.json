@@ -1,0 +1,12 @@
+{
+    "httpPort": 8080,
+    "mongo": {
+        "host": "ds143030.mlab.com",
+        "port": "43030",
+        "user": "admin",
+        "pass": "Teknos01",
+        "db": "esp_001",
+        "ssl": false
+    },
+    "cronDHT": "0 */5 * * * *"
+}

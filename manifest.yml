@@ -1,0 +1,7 @@
+---
+applications:
+- name: ESPSErver
+  host: ESPSErver
+  path: ./
+  command: node index.js
+  memory: 128M
