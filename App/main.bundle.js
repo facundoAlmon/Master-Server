@@ -297,8 +297,9 @@ var EspserviceService = /** @class */ (function () {
         this.tempValues = [];
         this.tempLabels = [];
         //this.url = "https://espserver.cfapps.us10.hana.ondemand.com";
-        this.url = "http://ec2-34-215-3-4.us-west-2.compute.amazonaws.com:8080";
+        //this.url = "http://ec2-34-215-3-4.us-west-2.compute.amazonaws.com:8080";
         //this.url = "http://localhost:8080";
+		this.url = "";
     }
     EspserviceService.prototype.getDevices = function () {
         return this.http.get(this.url + '/api/esp/devices').map(function (response) { return response.json(); });
