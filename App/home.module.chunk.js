@@ -81,7 +81,7 @@ var HomeModule = /** @class */ (function () {
 /***/ "../../../../../src/app/home/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form class=\"example-form\" (ngSubmit)=\"onSubmit($event)\">\n  <mat-accordion>\n    <mat-expansion-panel [expanded]=true *ngFor=\"let device of devices\">\n      <mat-expansion-panel-header>\n        <mat-panel-title>\n          {{device._id}}\n        </mat-panel-title>\n        <mat-panel-description>\n          {{device.descripcion}}\n        </mat-panel-description>\n      </mat-expansion-panel-header>\n      <mat-list>\n        <mat-list-item [hidden]=\"!device.modulosInfo.DHT.temp\">\n          Temperatura: {{device.modulosInfo.DHT.temp}} °C</mat-list-item>\n        <mat-list-item [hidden]=\"!device.modulosInfo.DHT.humedad\">\n          Humedad: {{device.modulosInfo.DHT.humedad}} %</mat-list-item>\n        <mat-list-item [hidden]=\"!device.modulosInfo.RELAY\">\n          <mat-slide-toggle color=\"primary\" (click)=\"switchRelay(device)\">Luz</mat-slide-toggle>\n        </mat-list-item>\n      </mat-list>\n      <mat-grid-list cols=\"4\" rowHeight=\"1:1\">\n        <mat-grid-tile colspan='1' *ngFor=\"let irCode of irCodes\">\n          <button mat-fab color=\"primary\" (click)=\"sendIRCode(device,irCode,$event)\">\n            {{irCode.nombre}}\n          </button>\n        </mat-grid-tile>\n      </mat-grid-list>\n    </mat-expansion-panel>\n  </mat-accordion>\n</form>\n"
+module.exports = "<form class=\"example-form\" (ngSubmit)=\"onSubmit($event)\">\n  <mat-accordion>\n    <mat-expansion-panel *ngFor=\"let device of devices\">\n      <mat-expansion-panel-header>\n        <mat-panel-title>\n          {{device._id}}\n        </mat-panel-title>\n        <mat-panel-description>\n          {{device.descripcion}}\n        </mat-panel-description>\n      </mat-expansion-panel-header>\n      <mat-list>\n        <mat-list-item *ngIf=\"device.modulosInfo.DHT != undefined\">\n          Temperatura: {{device.modulosInfo.DHT.temp}} °C</mat-list-item>\n        <mat-list-item *ngIf=\"device.modulosInfo.DHT != undefined\">\n          Humedad: {{device.modulosInfo.DHT.humedad}} %</mat-list-item>\n        <mat-list-item *ngIf=\"device.modulosInfo.RELAY != undefined\">\n          <mat-slide-toggle color=\"primary\" (click)=\"switchRelay(device)\">Luz</mat-slide-toggle>\n        </mat-list-item>\n      </mat-list>\n      <mat-grid-list cols=\"4\" rowHeight=\"1:1\" *ngIf=\"device.modulosInfo.IRSender != undefined\">\n        <mat-grid-tile colspan='1' *ngFor=\"let irCode of irCodes\">\n          <button mat-fab color=\"primary\" (click)=\"sendIRCode(device,irCode,$event)\">\n            {{irCode.nombre}}\n          </button>\n        </mat-grid-tile>\n      </mat-grid-list>\n    </mat-expansion-panel>\n  </mat-accordion>\n</form>\n"
 
 /***/ }),
 
@@ -175,6 +175,7 @@ var HomeComponent = /** @class */ (function () {
                         });
                     }
                 }
+                console.log(devices[i]);
                 if (!_this.devices[i]) {
                     _this.devices.push(devices[i]);
                 }

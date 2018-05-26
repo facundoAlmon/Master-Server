@@ -296,10 +296,10 @@ var EspserviceService = /** @class */ (function () {
         this.http = http;
         this.tempValues = [];
         this.tempLabels = [];
-        //this.url = "https://espserver.cfapps.us10.hana.ondemand.com";
-        //this.url = "http://ec2-34-215-3-4.us-west-2.compute.amazonaws.com:8080";
-        //this.url = "http://localhost:8080";
-		this.url = "";
+        //DEV
+        //this.url = "http://192.168.1.134:8080";
+        //PRD
+        this.url = "";
     }
     EspserviceService.prototype.getDevices = function () {
         return this.http.get(this.url + '/api/esp/devices').map(function (response) { return response.json(); });
@@ -402,6 +402,8 @@ var map = {
 	"./be.js": "../../../../moment/locale/be.js",
 	"./bg": "../../../../moment/locale/bg.js",
 	"./bg.js": "../../../../moment/locale/bg.js",
+	"./bm": "../../../../moment/locale/bm.js",
+	"./bm.js": "../../../../moment/locale/bm.js",
 	"./bn": "../../../../moment/locale/bn.js",
 	"./bn.js": "../../../../moment/locale/bn.js",
 	"./bo": "../../../../moment/locale/bo.js",
@@ -438,6 +440,8 @@ var map = {
 	"./en-gb.js": "../../../../moment/locale/en-gb.js",
 	"./en-ie": "../../../../moment/locale/en-ie.js",
 	"./en-ie.js": "../../../../moment/locale/en-ie.js",
+	"./en-il": "../../../../moment/locale/en-il.js",
+	"./en-il.js": "../../../../moment/locale/en-il.js",
 	"./en-nz": "../../../../moment/locale/en-nz.js",
 	"./en-nz.js": "../../../../moment/locale/en-nz.js",
 	"./eo": "../../../../moment/locale/eo.js",
@@ -445,6 +449,8 @@ var map = {
 	"./es": "../../../../moment/locale/es.js",
 	"./es-do": "../../../../moment/locale/es-do.js",
 	"./es-do.js": "../../../../moment/locale/es-do.js",
+	"./es-us": "../../../../moment/locale/es-us.js",
+	"./es-us.js": "../../../../moment/locale/es-us.js",
 	"./es.js": "../../../../moment/locale/es.js",
 	"./et": "../../../../moment/locale/et.js",
 	"./et.js": "../../../../moment/locale/et.js",
@@ -470,6 +476,8 @@ var map = {
 	"./gl.js": "../../../../moment/locale/gl.js",
 	"./gom-latn": "../../../../moment/locale/gom-latn.js",
 	"./gom-latn.js": "../../../../moment/locale/gom-latn.js",
+	"./gu": "../../../../moment/locale/gu.js",
+	"./gu.js": "../../../../moment/locale/gu.js",
 	"./he": "../../../../moment/locale/he.js",
 	"./he.js": "../../../../moment/locale/he.js",
 	"./hi": "../../../../moment/locale/hi.js",
@@ -518,12 +526,16 @@ var map = {
 	"./mk.js": "../../../../moment/locale/mk.js",
 	"./ml": "../../../../moment/locale/ml.js",
 	"./ml.js": "../../../../moment/locale/ml.js",
+	"./mn": "../../../../moment/locale/mn.js",
+	"./mn.js": "../../../../moment/locale/mn.js",
 	"./mr": "../../../../moment/locale/mr.js",
 	"./mr.js": "../../../../moment/locale/mr.js",
 	"./ms": "../../../../moment/locale/ms.js",
 	"./ms-my": "../../../../moment/locale/ms-my.js",
 	"./ms-my.js": "../../../../moment/locale/ms-my.js",
 	"./ms.js": "../../../../moment/locale/ms.js",
+	"./mt": "../../../../moment/locale/mt.js",
+	"./mt.js": "../../../../moment/locale/mt.js",
 	"./my": "../../../../moment/locale/my.js",
 	"./my.js": "../../../../moment/locale/my.js",
 	"./nb": "../../../../moment/locale/nb.js",
@@ -576,6 +588,8 @@ var map = {
 	"./te.js": "../../../../moment/locale/te.js",
 	"./tet": "../../../../moment/locale/tet.js",
 	"./tet.js": "../../../../moment/locale/tet.js",
+	"./tg": "../../../../moment/locale/tg.js",
+	"./tg.js": "../../../../moment/locale/tg.js",
 	"./th": "../../../../moment/locale/th.js",
 	"./th.js": "../../../../moment/locale/th.js",
 	"./tl-ph": "../../../../moment/locale/tl-ph.js",
@@ -590,6 +604,8 @@ var map = {
 	"./tzm-latn": "../../../../moment/locale/tzm-latn.js",
 	"./tzm-latn.js": "../../../../moment/locale/tzm-latn.js",
 	"./tzm.js": "../../../../moment/locale/tzm.js",
+	"./ug-cn": "../../../../moment/locale/ug-cn.js",
+	"./ug-cn.js": "../../../../moment/locale/ug-cn.js",
 	"./uk": "../../../../moment/locale/uk.js",
 	"./uk.js": "../../../../moment/locale/uk.js",
 	"./ur": "../../../../moment/locale/ur.js",
